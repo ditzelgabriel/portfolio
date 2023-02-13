@@ -1,0 +1,112 @@
+.experiencia {
+  padding-block: 40px;
+}
+
+.experiencia .titulo {
+  max-width: 4ch;
+  color: #e0e0e0;
+}
+
+.experiencia .texto {
+  color: #525252;
+}
+
+.experiencia .texto strong {
+  color: #141414;
+}
+
+.projetos {
+  display: grid;
+  gap: 20px;
+}
+
+.projeto {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: start;
+  align-items: start;
+  gap: 10px 20px;
+  border: 1px solid #f0f0f0;
+  border-radius: 5px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.projeto::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: -5px;
+  display: block;
+  width: 4px;
+  height: 20px;
+  background: linear-gradient(#b629f8, #800add);
+}
+
+.projeto-titulo {
+  font-size: 1.125rem;
+  line-height: 1.1;
+  color: #000000;
+}
+
+.projeto-texto {
+  grid-column: 1;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: #525252;
+}
+
+.projeto-habilidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.projeto-habilidades li {
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.projeto-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 12px 16px;
+  background: linear-gradient(#b629f8, #800add);
+  line-height: 1.35;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.projeto-link::after {
+  content: "";
+  display: block;
+  transition: transform 0.2s;
+  width: 18px;
+  height: 10px;
+  background: url(../img/seta.svg) no-repeat center;
+}
+
+.projeto-link:hover::after {
+  transform: translateX(4px);
+}
+
+@media (max-width: 800px) {
+  .experiencia .titulo {
+    max-width: initial;
+    color: #141414;
+  }
+}
+
+@media (max-width: 400px) {
+  .projeto {
+    grid-template-columns: 1fr;
+  }
+}
